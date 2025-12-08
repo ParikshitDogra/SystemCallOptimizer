@@ -336,6 +336,24 @@
         });
 
         socket.on('new_data', (data) => { updateDashboard(data); });
+        // Handle incoming data streams
+        socket.on('new_data', (data) => {
+            // Handle Status Messages (Type: status)
+            if (data.type === 'status') {
+                logToTerminal(data.msg, data.error);
+                return;
+            }
+            
+            // Handle Measurement Data (Type: data)
+            if (data.type === 'data') {
+                updateDashboard(data);
+            }
+            
+            // Fallback for older packet formats
+            if (data.current_syscall) {
+                updateDashboard(data);
+            }
+        });
 
         function scanProcesses() {
             logToTerminal('Scanning for Python signatures...');
@@ -414,4 +432,5 @@
         }
     </script>
 </body>
+
 </html>
