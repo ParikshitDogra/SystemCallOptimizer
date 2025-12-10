@@ -9,7 +9,7 @@ import os
 import logging
 import warnings
 from collections import deque
-from datetime import datetime # Added for readable timestamps
+from datetime import datetime
 
 # --- 1. Suppress Warnings & TensorFlow Logs ---
 warnings.filterwarnings("ignore", category=UserWarning, module='sklearn')
@@ -21,7 +21,8 @@ from tensorflow.keras.models import load_model
 # --- Configuration ---
 MODEL_DIR = "models"
 SEQUENCE_LENGTH = 5 
-LOG_FILE = "anomaly_log.json" # New: File to store anomalies
+LOG_FILE = "anomaly_log.json"
+# Regex matches: openat(AT_FDCWD, "file", ...) = 3 <0.00015>
 STRACE_REGEX = re.compile(r'^(\w+)\((.*)\)\s+=\s+([-0-9a-fx\?]+).*\s+<([0-9\.]+)>')
 
 class IntelligentMonitor:
@@ -29,14 +30,18 @@ class IntelligentMonitor:
         self.logger = self._setup_logger()
         self.logger.info("Initializing AI Engine...")
         
+        # State tracking for optimization
+        self.has_optimized = False 
+        
         self._send_json_status("Loading AI Models (this may take a few seconds)...")
 
-        # Initialize/Create the log file if it doesn't exist
+        # Initialize Log File
         if not os.path.exists(LOG_FILE):
             with open(LOG_FILE, 'w') as f:
                 json.dump([], f)
 
         try:
+            # Load Models
             with open(f"{MODEL_DIR}/label_encoder.pkl", "rb") as f:
                 self.le = pickle.load(f)
             with open(f"{MODEL_DIR}/scaler.pkl", "rb") as f:
@@ -63,14 +68,17 @@ class IntelligentMonitor:
         return logging.getLogger("Monitor")
 
     def _send_json_status(self, msg, is_error=False):
-        data = { "type": "status", "msg": msg, "error": is_error }
+        """Helper to send status updates to the UI via JSON"""
+        data = {
+            "type": "status", 
+            "msg": msg, 
+            "error": is_error
+        }
         print(json.dumps(data))
         sys.stdout.flush()
 
     def _log_anomaly(self, syscall, latency, prediction, timestamp):
-        """
-        Appends a detected anomaly to the JSON log file.
-        """
+        """Appends a detected anomaly to the JSON log file."""
         entry = {
             "time_readable": datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S'),
             "timestamp": timestamp,
@@ -79,24 +87,50 @@ class IntelligentMonitor:
             "predicted_next": prediction,
             "reason": "Abnormal Latency/Sequence"
         }
-        
         try:
-            # Read existing logs
             with open(LOG_FILE, 'r') as f:
                 try:
                     logs = json.load(f)
                 except json.JSONDecodeError:
                     logs = []
-            
-            # Append new entry
             logs.append(entry)
-            
-            # Write back to file
             with open(LOG_FILE, 'w') as f:
                 json.dump(logs, f, indent=4)
-                
         except Exception as e:
             self.logger.error(f"Failed to write log: {e}")
+
+    # --- NEW: Optimization Logic ---
+    def _optimize_process(self, pid):
+        """
+        Active Optimization: Boosts process priority (Nice value) 
+        when latency anomalies are detected.
+        """
+        # Only optimize once to avoid spamming the OS
+        if self.has_optimized:
+            return
+
+        self._send_json_status(f"⚠️ Anomaly Detected! Initiating AI Optimization for PID {pid}...", is_error=False)
+        
+        try:
+            # Command: renice -n -5 -p <PID>
+            # -n -5: Sets priority higher (Standard linux nice range is -20 to 19)
+            cmd = ["renice", "-n", "-5", "-p", str(pid)]
+            
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                success_msg = f"🚀 OPTIMIZATION SUCCESS: Priority boosted to -5 for PID {pid}."
+                self._send_json_status(success_msg)
+                self.has_optimized = True # Mark as optimized so we don't do it again
+            else:
+                # If we lack permissions, log it but don't crash
+                err = result.stderr.strip()
+                self._send_json_status(f"❌ Optimization Failed (Need Sudo?): {err}", is_error=True)
+                # We set this to true anyway to stop retrying every millisecond
+                self.has_optimized = True 
+                
+        except Exception as e:
+            self._send_json_status(f"Optimization Error: {e}", is_error=True)
 
     def preprocess_input(self, syscall, latency):
         if syscall in self.known_syscalls:
@@ -129,7 +163,7 @@ class IntelligentMonitor:
         try:
             process = subprocess.Popen(
                 cmd, 
-                stderr=subprocess.PIPE,
+                stderr=subprocess.PIPE, 
                 universal_newlines=True,
                 bufsize=1
             )
@@ -153,10 +187,12 @@ class IntelligentMonitor:
                         prediction = self.get_prediction()
                         status = self.detect_anomaly(enc_syscall, norm_latency)
                         
-                        # NEW: If status is ANOMALY, save it to file!
                         current_time = time.time()
+                        
+                        # --- TRIGGER OPTIMIZATION ---
                         if status == "ANOMALY":
                             self._log_anomaly(syscall_name, latency, prediction, current_time)
+                            self._optimize_process(pid)
 
                         result = {
                             "type": "data",
@@ -171,7 +207,7 @@ class IntelligentMonitor:
                         sys.stdout.flush()
                         
                     except Exception:
-                        continue
+                        continue 
                 else:
                     if len(clean_line) > 5 and "resuming" not in clean_line:
                          self._send_json_status(f"[STRACE] {clean_line}")
@@ -187,11 +223,13 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python3 backend_monitor.py <PID>")
         sys.exit(1)
-    
-    # Ensure logs aren't owned by root if using sudo (optional safety)
-    if os.environ.get('SUDO_UID'):
-        os.chown(LOG_FILE, int(os.environ['SUDO_UID']), int(os.environ['SUDO_GID']))
-
+        
     pid = sys.argv[1]
+    
+    # Optional: Fix file ownership if running as sudo
+    if os.environ.get('SUDO_UID'):
+        if os.path.exists(LOG_FILE):
+             os.chown(LOG_FILE, int(os.environ['SUDO_UID']), int(os.environ['SUDO_GID']))
+
     monitor = IntelligentMonitor()
     monitor.start_monitoring(pid)
