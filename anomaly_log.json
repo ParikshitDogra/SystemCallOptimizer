@@ -414,5 +414,2565 @@
         "latency": 0.484177,
         "predicted_next": "openat",
         "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:33",
+        "timestamp": 1765135113.5471032,
+        "syscall": "pselect6",
+        "latency": 0.180467,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:33",
+        "timestamp": 1765135113.757603,
+        "syscall": "pselect6",
+        "latency": 0.209853,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:33",
+        "timestamp": 1765135113.9241347,
+        "syscall": "pselect6",
+        "latency": 0.167171,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:34",
+        "timestamp": 1765135114.5292838,
+        "syscall": "write",
+        "latency": 0.002619,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:36",
+        "timestamp": 1765135116.6742437,
+        "syscall": "pselect6",
+        "latency": 0.264157,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:40",
+        "timestamp": 1765135120.48294,
+        "syscall": "pselect6",
+        "latency": 0.162597,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:40",
+        "timestamp": 1765135120.5669148,
+        "syscall": "pselect6",
+        "latency": 0.127801,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:40",
+        "timestamp": 1765135120.6418853,
+        "syscall": "pselect6",
+        "latency": 0.130514,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:45",
+        "timestamp": 1765135125.7499232,
+        "syscall": "pselect6",
+        "latency": 0.134319,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:47",
+        "timestamp": 1765135127.2036576,
+        "syscall": "pselect6",
+        "latency": 0.165439,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:47",
+        "timestamp": 1765135127.2766843,
+        "syscall": "pselect6",
+        "latency": 0.122285,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:47",
+        "timestamp": 1765135127.3450572,
+        "syscall": "pselect6",
+        "latency": 0.32265,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:47",
+        "timestamp": 1765135127.412389,
+        "syscall": "pselect6",
+        "latency": 0.103352,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:47",
+        "timestamp": 1765135127.4823568,
+        "syscall": "pselect6",
+        "latency": 0.478835,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.0877984,
+        "syscall": "pselect6",
+        "latency": 0.267801,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.1508155,
+        "syscall": "pselect6",
+        "latency": 0.147726,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.2213652,
+        "syscall": "pselect6",
+        "latency": 0.175677,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.2826412,
+        "syscall": "pselect6",
+        "latency": 0.197114,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.3456788,
+        "syscall": "pselect6",
+        "latency": 0.411351,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.4130085,
+        "syscall": "pselect6",
+        "latency": 0.236448,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.4844444,
+        "syscall": "pselect6",
+        "latency": 0.238598,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:50",
+        "timestamp": 1765135130.5783014,
+        "syscall": "pselect6",
+        "latency": 0.392994,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:48:53",
+        "timestamp": 1765135133.29504,
+        "syscall": "pselect6",
+        "latency": 0.382589,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:01",
+        "timestamp": 1765135141.6654413,
+        "syscall": "pselect6",
+        "latency": 0.207486,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:01",
+        "timestamp": 1765135141.7394853,
+        "syscall": "pselect6",
+        "latency": 0.362901,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:04",
+        "timestamp": 1765135144.5811625,
+        "syscall": "pselect6",
+        "latency": 0.441908,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:04",
+        "timestamp": 1765135144.6606748,
+        "syscall": "pselect6",
+        "latency": 0.473341,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:13",
+        "timestamp": 1765135153.6721559,
+        "syscall": "unlink",
+        "latency": 0.004959,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:13",
+        "timestamp": 1765135153.849774,
+        "syscall": "pselect6",
+        "latency": 0.205947,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:14",
+        "timestamp": 1765135154.0192719,
+        "syscall": "pselect6",
+        "latency": 0.357019,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:14",
+        "timestamp": 1765135154.142209,
+        "syscall": "pselect6",
+        "latency": 0.220176,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:14",
+        "timestamp": 1765135154.316901,
+        "syscall": "pselect6",
+        "latency": 0.444463,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:14",
+        "timestamp": 1765135154.5244517,
+        "syscall": "pselect6",
+        "latency": 0.337195,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:14",
+        "timestamp": 1765135154.6754212,
+        "syscall": "pselect6",
+        "latency": 0.228877,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:14",
+        "timestamp": 1765135154.8238878,
+        "syscall": "pselect6",
+        "latency": 0.253989,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:14",
+        "timestamp": 1765135154.9919617,
+        "syscall": "pselect6",
+        "latency": 0.228178,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:15",
+        "timestamp": 1765135155.1115825,
+        "syscall": "pselect6",
+        "latency": 0.41642,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:15",
+        "timestamp": 1765135155.1926842,
+        "syscall": "pselect6",
+        "latency": 0.305926,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:18",
+        "timestamp": 1765135158.6914747,
+        "syscall": "pselect6",
+        "latency": 0.258977,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:20",
+        "timestamp": 1765135160.4063215,
+        "syscall": "pselect6",
+        "latency": 0.159484,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:21",
+        "timestamp": 1765135161.9726667,
+        "syscall": "pselect6",
+        "latency": 0.491741,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:49:25",
+        "timestamp": 1765135165.1568606,
+        "syscall": "pselect6",
+        "latency": 0.426417,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:32",
+        "timestamp": 1765135712.029621,
+        "syscall": "pselect6",
+        "latency": 0.182029,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:32",
+        "timestamp": 1765135712.2092073,
+        "syscall": "pselect6",
+        "latency": 0.177082,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:32",
+        "timestamp": 1765135712.6732779,
+        "syscall": "pselect6",
+        "latency": 0.463939,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:32",
+        "timestamp": 1765135712.926034,
+        "syscall": "pselect6",
+        "latency": 0.251094,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:34",
+        "timestamp": 1765135714.272441,
+        "syscall": "pselect6",
+        "latency": 0.324267,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:34",
+        "timestamp": 1765135714.3433113,
+        "syscall": "pselect6",
+        "latency": 0.392272,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:35",
+        "timestamp": 1765135715.746251,
+        "syscall": "pselect6",
+        "latency": 0.394756,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:38",
+        "timestamp": 1765135718.6052873,
+        "syscall": "pselect6",
+        "latency": 0.445064,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:40",
+        "timestamp": 1765135720.027595,
+        "syscall": "pselect6",
+        "latency": 0.366729,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:40",
+        "timestamp": 1765135720.1056545,
+        "syscall": "pselect6",
+        "latency": 0.418437,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:40",
+        "timestamp": 1765135720.1803195,
+        "syscall": "pselect6",
+        "latency": 0.250499,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:43",
+        "timestamp": 1765135723.044207,
+        "syscall": "pselect6",
+        "latency": 0.323088,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:44",
+        "timestamp": 1765135724.4880872,
+        "syscall": "unlink",
+        "latency": 0.002884,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:44",
+        "timestamp": 1765135724.5865269,
+        "syscall": "pselect6",
+        "latency": 0.44403,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:46",
+        "timestamp": 1765135726.1420655,
+        "syscall": "pselect6",
+        "latency": 0.247253,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:47",
+        "timestamp": 1765135727.6122048,
+        "syscall": "pselect6",
+        "latency": 0.284998,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:53",
+        "timestamp": 1765135733.4730995,
+        "syscall": "pselect6",
+        "latency": 0.473368,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:53",
+        "timestamp": 1765135733.5415053,
+        "syscall": "pselect6",
+        "latency": 0.452064,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:53",
+        "timestamp": 1765135733.630148,
+        "syscall": "pselect6",
+        "latency": 0.237188,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:55",
+        "timestamp": 1765135735.0448976,
+        "syscall": "pselect6",
+        "latency": 0.362431,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:56",
+        "timestamp": 1765135736.6437078,
+        "syscall": "pselect6",
+        "latency": 0.204372,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:58:58",
+        "timestamp": 1765135738.6557362,
+        "syscall": "close",
+        "latency": 0.001368,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:00",
+        "timestamp": 1765135740.8977861,
+        "syscall": "unlink",
+        "latency": 0.003389,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:00",
+        "timestamp": 1765135740.966387,
+        "syscall": "pselect6",
+        "latency": 0.324723,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:01",
+        "timestamp": 1765135741.0371099,
+        "syscall": "pselect6",
+        "latency": 0.44626,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:01",
+        "timestamp": 1765135741.1172771,
+        "syscall": "pselect6",
+        "latency": 0.271967,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:01",
+        "timestamp": 1765135741.2064717,
+        "syscall": "pselect6",
+        "latency": 0.342055,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:02",
+        "timestamp": 1765135742.6324902,
+        "syscall": "pselect6",
+        "latency": 0.177953,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:02",
+        "timestamp": 1765135742.7140472,
+        "syscall": "pselect6",
+        "latency": 0.396966,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:13",
+        "timestamp": 1765135753.4896386,
+        "syscall": "pselect6",
+        "latency": 0.352956,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:15",
+        "timestamp": 1765135755.1042612,
+        "syscall": "pselect6",
+        "latency": 0.396965,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:16",
+        "timestamp": 1765135756.225664,
+        "syscall": "unlink",
+        "latency": 0.003215,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:16",
+        "timestamp": 1765135756.3071346,
+        "syscall": "pselect6",
+        "latency": 0.218433,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:16",
+        "timestamp": 1765135756.737671,
+        "syscall": "write",
+        "latency": 0.002329,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:19",
+        "timestamp": 1765135759.2709363,
+        "syscall": "pselect6",
+        "latency": 0.390522,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:19",
+        "timestamp": 1765135759.3610082,
+        "syscall": "pselect6",
+        "latency": 0.313563,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:19",
+        "timestamp": 1765135759.4533699,
+        "syscall": "pselect6",
+        "latency": 0.422833,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:22",
+        "timestamp": 1765135762.2162924,
+        "syscall": "pselect6",
+        "latency": 0.108892,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:23",
+        "timestamp": 1765135763.7614615,
+        "syscall": "pselect6",
+        "latency": 0.121835,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:23",
+        "timestamp": 1765135763.853676,
+        "syscall": "pselect6",
+        "latency": 0.291952,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:28",
+        "timestamp": 1765135768.2834942,
+        "syscall": "pselect6",
+        "latency": 0.389452,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:29",
+        "timestamp": 1765135769.80144,
+        "syscall": "pselect6",
+        "latency": 0.376213,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:29",
+        "timestamp": 1765135769.8929796,
+        "syscall": "pselect6",
+        "latency": 0.384679,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:29",
+        "timestamp": 1765135769.9695015,
+        "syscall": "pselect6",
+        "latency": 0.492612,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:30",
+        "timestamp": 1765135770.587671,
+        "syscall": "close",
+        "latency": 0.001338,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:31",
+        "timestamp": 1765135771.5397544,
+        "syscall": "pselect6",
+        "latency": 0.309819,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:34",
+        "timestamp": 1765135774.6363454,
+        "syscall": "pselect6",
+        "latency": 0.168214,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:34",
+        "timestamp": 1765135774.7107491,
+        "syscall": "pselect6",
+        "latency": 0.147083,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:34",
+        "timestamp": 1765135774.802912,
+        "syscall": "pselect6",
+        "latency": 0.294402,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:34",
+        "timestamp": 1765135774.894573,
+        "syscall": "pselect6",
+        "latency": 0.367328,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:36",
+        "timestamp": 1765135776.5173414,
+        "syscall": "pselect6",
+        "latency": 0.393242,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:36",
+        "timestamp": 1765135776.5977967,
+        "syscall": "pselect6",
+        "latency": 0.250983,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:36",
+        "timestamp": 1765135776.6967897,
+        "syscall": "pselect6",
+        "latency": 0.316135,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:40",
+        "timestamp": 1765135780.1030054,
+        "syscall": "pselect6",
+        "latency": 0.488893,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:40",
+        "timestamp": 1765135780.1962798,
+        "syscall": "pselect6",
+        "latency": 0.212941,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:40",
+        "timestamp": 1765135780.287853,
+        "syscall": "pselect6",
+        "latency": 0.499149,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:41",
+        "timestamp": 1765135781.8326864,
+        "syscall": "pselect6",
+        "latency": 0.465895,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:46",
+        "timestamp": 1765135786.6454268,
+        "syscall": "pselect6",
+        "latency": 0.269578,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:47",
+        "timestamp": 1765135787.7686985,
+        "syscall": "unlink",
+        "latency": 0.005178,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:47",
+        "timestamp": 1765135787.8372803,
+        "syscall": "pselect6",
+        "latency": 0.108049,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:48",
+        "timestamp": 1765135788.924996,
+        "syscall": "pselect6",
+        "latency": 0.172565,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:50",
+        "timestamp": 1765135790.067164,
+        "syscall": "pselect6",
+        "latency": 0.264242,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:51",
+        "timestamp": 1765135791.2351747,
+        "syscall": "pselect6",
+        "latency": 0.348176,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:51",
+        "timestamp": 1765135791.2961075,
+        "syscall": "pselect6",
+        "latency": 0.323677,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:51",
+        "timestamp": 1765135791.3549602,
+        "syscall": "pselect6",
+        "latency": 0.217996,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:52",
+        "timestamp": 1765135792.4381876,
+        "syscall": "pselect6",
+        "latency": 0.205312,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:54",
+        "timestamp": 1765135794.4610143,
+        "syscall": "pselect6",
+        "latency": 0.522314,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:54",
+        "timestamp": 1765135794.5443769,
+        "syscall": "pselect6",
+        "latency": 0.298537,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:54",
+        "timestamp": 1765135794.619442,
+        "syscall": "pselect6",
+        "latency": 0.354366,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:55",
+        "timestamp": 1765135795.708285,
+        "syscall": "pselect6",
+        "latency": 0.450264,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:55",
+        "timestamp": 1765135795.7909365,
+        "syscall": "pselect6",
+        "latency": 0.198188,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:55",
+        "timestamp": 1765135795.8675523,
+        "syscall": "pselect6",
+        "latency": 0.325932,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 00:59:55",
+        "timestamp": 1765135795.9245515,
+        "syscall": "pselect6",
+        "latency": 0.285027,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:00",
+        "timestamp": 1765135800.1977947,
+        "syscall": "pselect6",
+        "latency": 0.349125,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:01",
+        "timestamp": 1765135801.276638,
+        "syscall": "pselect6",
+        "latency": 0.30286,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:05",
+        "timestamp": 1765135805.751683,
+        "syscall": "pselect6",
+        "latency": 0.36342,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:07",
+        "timestamp": 1765135807.0014274,
+        "syscall": "pselect6",
+        "latency": 0.35393,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:07",
+        "timestamp": 1765135807.0568705,
+        "syscall": "pselect6",
+        "latency": 0.149509,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:07",
+        "timestamp": 1765135807.1254368,
+        "syscall": "pselect6",
+        "latency": 0.238501,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:07",
+        "timestamp": 1765135807.1927836,
+        "syscall": "pselect6",
+        "latency": 0.421439,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:07",
+        "timestamp": 1765135807.2570477,
+        "syscall": "pselect6",
+        "latency": 0.186046,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:08",
+        "timestamp": 1765135808.4300425,
+        "syscall": "pselect6",
+        "latency": 0.163632,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:09",
+        "timestamp": 1765135809.6131406,
+        "syscall": "pselect6",
+        "latency": 0.253516,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:10",
+        "timestamp": 1765135810.1559918,
+        "syscall": "write",
+        "latency": 0.002544,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:13",
+        "timestamp": 1765135813.8876,
+        "syscall": "pselect6",
+        "latency": 0.496524,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:15",
+        "timestamp": 1765135815.048144,
+        "syscall": "pselect6",
+        "latency": 0.429949,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:15",
+        "timestamp": 1765135815.1477497,
+        "syscall": "pselect6",
+        "latency": 0.254466,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:16",
+        "timestamp": 1765135816.8981833,
+        "syscall": "pselect6",
+        "latency": 0.193471,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:17",
+        "timestamp": 1765135817.5759237,
+        "syscall": "close",
+        "latency": 0.002115,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:20",
+        "timestamp": 1765135820.1783235,
+        "syscall": "write",
+        "latency": 0.001941,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:20",
+        "timestamp": 1765135820.942489,
+        "syscall": "unlink",
+        "latency": 0.003207,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:24",
+        "timestamp": 1765135824.5542786,
+        "syscall": "pselect6",
+        "latency": 0.485594,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:25",
+        "timestamp": 1765135825.6788218,
+        "syscall": "pselect6",
+        "latency": 0.294895,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:26",
+        "timestamp": 1765135826.903163,
+        "syscall": "pselect6",
+        "latency": 0.490702,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:26",
+        "timestamp": 1765135826.9650447,
+        "syscall": "pselect6",
+        "latency": 0.43056,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:27",
+        "timestamp": 1765135827.0383222,
+        "syscall": "pselect6",
+        "latency": 0.433582,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:27",
+        "timestamp": 1765135827.1459615,
+        "syscall": "pselect6",
+        "latency": 0.315523,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:29",
+        "timestamp": 1765135829.570932,
+        "syscall": "pselect6",
+        "latency": 0.401803,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:29",
+        "timestamp": 1765135829.6547046,
+        "syscall": "pselect6",
+        "latency": 0.200199,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:29",
+        "timestamp": 1765135829.7335298,
+        "syscall": "pselect6",
+        "latency": 0.401672,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:31",
+        "timestamp": 1765135831.463022,
+        "syscall": "write",
+        "latency": 0.002419,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:36",
+        "timestamp": 1765135836.333605,
+        "syscall": "pselect6",
+        "latency": 0.314896,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:36",
+        "timestamp": 1765135836.4088368,
+        "syscall": "pselect6",
+        "latency": 0.130912,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:40",
+        "timestamp": 1765135840.4226046,
+        "syscall": "pselect6",
+        "latency": 0.108563,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:55",
+        "timestamp": 1765135855.5482488,
+        "syscall": "pselect6",
+        "latency": 0.23002,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:55",
+        "timestamp": 1765135855.6079378,
+        "syscall": "pselect6",
+        "latency": 0.371007,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:55",
+        "timestamp": 1765135855.6638687,
+        "syscall": "pselect6",
+        "latency": 0.270977,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:56",
+        "timestamp": 1765135856.8915973,
+        "syscall": "pselect6",
+        "latency": 0.289524,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:00:58",
+        "timestamp": 1765135858.0345325,
+        "syscall": "pselect6",
+        "latency": 0.130157,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:02",
+        "timestamp": 1765135862.0627959,
+        "syscall": "pselect6",
+        "latency": 0.471826,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:02",
+        "timestamp": 1765135862.5554721,
+        "syscall": "close",
+        "latency": 0.00165,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:03",
+        "timestamp": 1765135863.2374732,
+        "syscall": "pselect6",
+        "latency": 0.108001,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:04",
+        "timestamp": 1765135864.353916,
+        "syscall": "pselect6",
+        "latency": 0.396405,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:05",
+        "timestamp": 1765135865.4852211,
+        "syscall": "pselect6",
+        "latency": 0.322674,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:05",
+        "timestamp": 1765135865.5380874,
+        "syscall": "pselect6",
+        "latency": 0.260933,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:05",
+        "timestamp": 1765135865.5943003,
+        "syscall": "pselect6",
+        "latency": 0.372976,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:06",
+        "timestamp": 1765135866.6050448,
+        "syscall": "pselect6",
+        "latency": 0.207727,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:07",
+        "timestamp": 1765135867.9929426,
+        "syscall": "ioctl",
+        "latency": 0.005916,
+        "predicted_next": "lseek",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:08",
+        "timestamp": 1765135868.8557456,
+        "syscall": "pselect6",
+        "latency": 0.152176,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:08",
+        "timestamp": 1765135868.9200144,
+        "syscall": "pselect6",
+        "latency": 0.332932,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:08",
+        "timestamp": 1765135868.9742534,
+        "syscall": "pselect6",
+        "latency": 0.387182,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:14",
+        "timestamp": 1765135874.4915767,
+        "syscall": "pselect6",
+        "latency": 0.432063,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:14",
+        "timestamp": 1765135874.5650718,
+        "syscall": "pselect6",
+        "latency": 0.44119,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:14",
+        "timestamp": 1765135874.6441998,
+        "syscall": "pselect6",
+        "latency": 0.313249,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:14",
+        "timestamp": 1765135874.736046,
+        "syscall": "pselect6",
+        "latency": 0.468064,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:14",
+        "timestamp": 1765135874.8265803,
+        "syscall": "pselect6",
+        "latency": 0.411973,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:14",
+        "timestamp": 1765135874.9097245,
+        "syscall": "pselect6",
+        "latency": 0.36805,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:14",
+        "timestamp": 1765135874.9895992,
+        "syscall": "pselect6",
+        "latency": 0.322449,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:15",
+        "timestamp": 1765135875.0678,
+        "syscall": "pselect6",
+        "latency": 0.488202,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:16",
+        "timestamp": 1765135876.5129175,
+        "syscall": "pselect6",
+        "latency": 0.287064,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:16",
+        "timestamp": 1765135876.6050825,
+        "syscall": "pselect6",
+        "latency": 0.439784,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:18",
+        "timestamp": 1765135878.0235918,
+        "syscall": "pselect6",
+        "latency": 0.177248,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:21",
+        "timestamp": 1765135881.4459045,
+        "syscall": "pselect6",
+        "latency": 0.375313,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:21",
+        "timestamp": 1765135881.5008917,
+        "syscall": "pselect6",
+        "latency": 0.10153,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:21",
+        "timestamp": 1765135881.5721378,
+        "syscall": "pselect6",
+        "latency": 0.3341,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:21",
+        "timestamp": 1765135881.658751,
+        "syscall": "pselect6",
+        "latency": 0.289168,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:21",
+        "timestamp": 1765135881.7359326,
+        "syscall": "pselect6",
+        "latency": 0.477241,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:22",
+        "timestamp": 1765135882.8755152,
+        "syscall": "pselect6",
+        "latency": 0.194398,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:22",
+        "timestamp": 1765135882.9572988,
+        "syscall": "pselect6",
+        "latency": 0.422685,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:25",
+        "timestamp": 1765135885.2508423,
+        "syscall": "pselect6",
+        "latency": 0.262484,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:25",
+        "timestamp": 1765135885.3170862,
+        "syscall": "pselect6",
+        "latency": 0.347386,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:25",
+        "timestamp": 1765135885.3859944,
+        "syscall": "pselect6",
+        "latency": 0.38896,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:25",
+        "timestamp": 1765135885.4750645,
+        "syscall": "pselect6",
+        "latency": 0.48264,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:25",
+        "timestamp": 1765135885.8572295,
+        "syscall": "write",
+        "latency": 0.001859,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:25",
+        "timestamp": 1765135885.9191182,
+        "syscall": "close",
+        "latency": 0.004421,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:26",
+        "timestamp": 1765135886.517511,
+        "syscall": "unlink",
+        "latency": 0.003595,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:26",
+        "timestamp": 1765135886.5942802,
+        "syscall": "pselect6",
+        "latency": 0.280168,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:26",
+        "timestamp": 1765135886.6661503,
+        "syscall": "pselect6",
+        "latency": 0.483858,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:26",
+        "timestamp": 1765135886.7436087,
+        "syscall": "pselect6",
+        "latency": 0.326604,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:28",
+        "timestamp": 1765135888.0354931,
+        "syscall": "pselect6",
+        "latency": 0.305858,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:28",
+        "timestamp": 1765135888.0947418,
+        "syscall": "pselect6",
+        "latency": 0.143837,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:28",
+        "timestamp": 1765135888.1517317,
+        "syscall": "pselect6",
+        "latency": 0.201347,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:28",
+        "timestamp": 1765135888.2124116,
+        "syscall": "pselect6",
+        "latency": 0.381446,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:28",
+        "timestamp": 1765135888.605223,
+        "syscall": "close",
+        "latency": 0.001059,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:32",
+        "timestamp": 1765135892.5843632,
+        "syscall": "pselect6",
+        "latency": 0.380447,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:33",
+        "timestamp": 1765135893.5560853,
+        "syscall": "close",
+        "latency": 0.001166,
+        "predicted_next": "unlink",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:33",
+        "timestamp": 1765135893.7439284,
+        "syscall": "pselect6",
+        "latency": 0.176836,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:34",
+        "timestamp": 1765135894.7434795,
+        "syscall": "close",
+        "latency": 0.000979,
+        "predicted_next": "unlink",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:34",
+        "timestamp": 1765135894.88936,
+        "syscall": "pselect6",
+        "latency": 0.243029,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:35",
+        "timestamp": 1765135895.4646654,
+        "syscall": "close",
+        "latency": 0.001274,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:36",
+        "timestamp": 1765135896.1687648,
+        "syscall": "pselect6",
+        "latency": 0.302939,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:39",
+        "timestamp": 1765135899.3176465,
+        "syscall": "pselect6",
+        "latency": 0.202082,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:39",
+        "timestamp": 1765135899.371759,
+        "syscall": "pselect6",
+        "latency": 0.269357,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:39",
+        "timestamp": 1765135899.4366167,
+        "syscall": "pselect6",
+        "latency": 0.331845,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:39",
+        "timestamp": 1765135899.4997847,
+        "syscall": "pselect6",
+        "latency": 0.177282,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:40",
+        "timestamp": 1765135900.5429673,
+        "syscall": "pselect6",
+        "latency": 0.255104,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:42",
+        "timestamp": 1765135902.3602195,
+        "syscall": "pselect6",
+        "latency": 0.393266,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:42",
+        "timestamp": 1765135902.4129083,
+        "syscall": "pselect6",
+        "latency": 0.274519,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:42",
+        "timestamp": 1765135902.4672422,
+        "syscall": "pselect6",
+        "latency": 0.363082,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:42",
+        "timestamp": 1765135902.522776,
+        "syscall": "pselect6",
+        "latency": 0.183193,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:44",
+        "timestamp": 1765135904.3841875,
+        "syscall": "pselect6",
+        "latency": 0.265842,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:44",
+        "timestamp": 1765135904.5054505,
+        "syscall": "pselect6",
+        "latency": 0.379211,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:44",
+        "timestamp": 1765135904.622269,
+        "syscall": "pselect6",
+        "latency": 0.391754,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:46",
+        "timestamp": 1765135906.014705,
+        "syscall": "pselect6",
+        "latency": 0.33963,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:46",
+        "timestamp": 1765135906.0957377,
+        "syscall": "pselect6",
+        "latency": 0.443228,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:47",
+        "timestamp": 1765135907.5403545,
+        "syscall": "pselect6",
+        "latency": 0.383041,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:47",
+        "timestamp": 1765135907.6229684,
+        "syscall": "pselect6",
+        "latency": 0.146664,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:47",
+        "timestamp": 1765135907.700873,
+        "syscall": "pselect6",
+        "latency": 0.427732,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:47",
+        "timestamp": 1765135907.7750845,
+        "syscall": "pselect6",
+        "latency": 0.435799,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:01:50",
+        "timestamp": 1765135910.3442569,
+        "syscall": "pselect6",
+        "latency": 0.104873,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:27",
+        "timestamp": 1765136127.0044944,
+        "syscall": "pselect6",
+        "latency": 0.320079,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:28",
+        "timestamp": 1765136128.436056,
+        "syscall": "pselect6",
+        "latency": 0.475419,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:28",
+        "timestamp": 1765136128.5131123,
+        "syscall": "pselect6",
+        "latency": 0.177641,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:29",
+        "timestamp": 1765136129.8161666,
+        "syscall": "close",
+        "latency": 0.001608,
+        "predicted_next": "unlink",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:29",
+        "timestamp": 1765136129.9655297,
+        "syscall": "pselect6",
+        "latency": 0.278869,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:31",
+        "timestamp": 1765136131.9707289,
+        "syscall": "close",
+        "latency": 0.001294,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:32",
+        "timestamp": 1765136132.80493,
+        "syscall": "unlink",
+        "latency": 0.00265,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:34",
+        "timestamp": 1765136134.388253,
+        "syscall": "pselect6",
+        "latency": 0.379352,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:34",
+        "timestamp": 1765136134.4776826,
+        "syscall": "pselect6",
+        "latency": 0.481178,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:36",
+        "timestamp": 1765136136.089248,
+        "syscall": "pselect6",
+        "latency": 0.41746,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:36",
+        "timestamp": 1765136136.174162,
+        "syscall": "pselect6",
+        "latency": 0.360214,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:36",
+        "timestamp": 1765136136.2645822,
+        "syscall": "pselect6",
+        "latency": 0.237877,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:36",
+        "timestamp": 1765136136.3593137,
+        "syscall": "pselect6",
+        "latency": 0.192416,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:39",
+        "timestamp": 1765136139.3832974,
+        "syscall": "pselect6",
+        "latency": 0.19422,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:39",
+        "timestamp": 1765136139.4696004,
+        "syscall": "pselect6",
+        "latency": 0.484763,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:39",
+        "timestamp": 1765136139.5452983,
+        "syscall": "pselect6",
+        "latency": 0.30879,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:39",
+        "timestamp": 1765136139.6067631,
+        "syscall": "pselect6",
+        "latency": 0.191313,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:39",
+        "timestamp": 1765136139.6886494,
+        "syscall": "pselect6",
+        "latency": 0.439545,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:40",
+        "timestamp": 1765136140.152441,
+        "syscall": "write",
+        "latency": 0.002834,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:41",
+        "timestamp": 1765136141.5120153,
+        "syscall": "close",
+        "latency": 0.000994,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:42",
+        "timestamp": 1765136142.4463515,
+        "syscall": "pselect6",
+        "latency": 0.413131,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:42",
+        "timestamp": 1765136142.531194,
+        "syscall": "pselect6",
+        "latency": 0.144112,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:48",
+        "timestamp": 1765136148.1155453,
+        "syscall": "pselect6",
+        "latency": 0.347663,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:48",
+        "timestamp": 1765136148.192251,
+        "syscall": "pselect6",
+        "latency": 0.153335,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:51",
+        "timestamp": 1765136151.631827,
+        "syscall": "close",
+        "latency": 0.005568,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:52",
+        "timestamp": 1765136152.5681438,
+        "syscall": "pselect6",
+        "latency": 0.397452,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:52",
+        "timestamp": 1765136152.6431322,
+        "syscall": "pselect6",
+        "latency": 0.253544,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:52",
+        "timestamp": 1765136152.727512,
+        "syscall": "pselect6",
+        "latency": 0.36089,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:54",
+        "timestamp": 1765136154.1921248,
+        "syscall": "pselect6",
+        "latency": 0.197034,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:54",
+        "timestamp": 1765136154.2813754,
+        "syscall": "pselect6",
+        "latency": 0.366183,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:55",
+        "timestamp": 1765136155.8306248,
+        "syscall": "pselect6",
+        "latency": 0.346274,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:56",
+        "timestamp": 1765136156.4242213,
+        "syscall": "close",
+        "latency": 0.002397,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:57",
+        "timestamp": 1765136157.3236814,
+        "syscall": "pselect6",
+        "latency": 0.281503,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:05:57",
+        "timestamp": 1765136157.4038866,
+        "syscall": "pselect6",
+        "latency": 0.177134,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:00",
+        "timestamp": 1765136160.5238538,
+        "syscall": "pselect6",
+        "latency": 0.478859,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:03",
+        "timestamp": 1765136163.5718663,
+        "syscall": "pselect6",
+        "latency": 0.190624,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:03",
+        "timestamp": 1765136163.6916668,
+        "syscall": "pselect6",
+        "latency": 0.277767,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:03",
+        "timestamp": 1765136163.7838645,
+        "syscall": "pselect6",
+        "latency": 0.10088,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:05",
+        "timestamp": 1765136165.229482,
+        "syscall": "pselect6",
+        "latency": 0.457037,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:05",
+        "timestamp": 1765136165.3123064,
+        "syscall": "pselect6",
+        "latency": 0.173612,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:08",
+        "timestamp": 1765136168.7408433,
+        "syscall": "write",
+        "latency": 0.003348,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:10",
+        "timestamp": 1765136170.237451,
+        "syscall": "write",
+        "latency": 0.004117,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:11",
+        "timestamp": 1765136171.2772431,
+        "syscall": "pselect6",
+        "latency": 0.288562,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:11",
+        "timestamp": 1765136171.3719106,
+        "syscall": "pselect6",
+        "latency": 0.470839,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:11",
+        "timestamp": 1765136171.4636216,
+        "syscall": "pselect6",
+        "latency": 0.122297,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:12",
+        "timestamp": 1765136172.987387,
+        "syscall": "pselect6",
+        "latency": 0.398262,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:13",
+        "timestamp": 1765136173.0743644,
+        "syscall": "pselect6",
+        "latency": 0.446861,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:13",
+        "timestamp": 1765136173.1623063,
+        "syscall": "pselect6",
+        "latency": 0.331579,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:19",
+        "timestamp": 1765136179.2236853,
+        "syscall": "pselect6",
+        "latency": 0.410685,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 01:06:19",
+        "timestamp": 1765136179.3032763,
+        "syscall": "pselect6",
+        "latency": 0.447416,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:31",
+        "timestamp": 1765202371.299071,
+        "syscall": "pselect6",
+        "latency": 0.412073,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:31",
+        "timestamp": 1765202371.5447958,
+        "syscall": "pselect6",
+        "latency": 0.248165,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:31",
+        "timestamp": 1765202371.774748,
+        "syscall": "pselect6",
+        "latency": 0.21499,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:31",
+        "timestamp": 1765202371.9481277,
+        "syscall": "pselect6",
+        "latency": 0.155604,
+        "predicted_next": "Analyzing...",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:32",
+        "timestamp": 1765202372.708066,
+        "syscall": "pselect6",
+        "latency": 0.119544,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:32",
+        "timestamp": 1765202372.9531221,
+        "syscall": "pselect6",
+        "latency": 0.217207,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:34",
+        "timestamp": 1765202374.6847847,
+        "syscall": "close",
+        "latency": 0.004593,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:37",
+        "timestamp": 1765202377.1716583,
+        "syscall": "write",
+        "latency": 0.003766,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:44",
+        "timestamp": 1765202384.882355,
+        "syscall": "pselect6",
+        "latency": 0.380702,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:45",
+        "timestamp": 1765202385.0529587,
+        "syscall": "pselect6",
+        "latency": 0.13511,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:48",
+        "timestamp": 1765202388.1573982,
+        "syscall": "pselect6",
+        "latency": 0.309392,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:49",
+        "timestamp": 1765202389.6398559,
+        "syscall": "write",
+        "latency": 0.008199,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:52",
+        "timestamp": 1765202392.6709266,
+        "syscall": "close",
+        "latency": 0.010017,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:54",
+        "timestamp": 1765202394.6871972,
+        "syscall": "pselect6",
+        "latency": 0.389359,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:57",
+        "timestamp": 1765202397.8327804,
+        "syscall": "pselect6",
+        "latency": 0.4053,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:57",
+        "timestamp": 1765202397.994139,
+        "syscall": "pselect6",
+        "latency": 0.139846,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:29:58",
+        "timestamp": 1765202398.1771975,
+        "syscall": "pselect6",
+        "latency": 0.335965,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:01",
+        "timestamp": 1765202401.4818947,
+        "syscall": "unlink",
+        "latency": 0.002715,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:02",
+        "timestamp": 1765202402.8576422,
+        "syscall": "close",
+        "latency": 0.004039,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:08",
+        "timestamp": 1765202408.0181313,
+        "syscall": "pselect6",
+        "latency": 0.316963,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:12",
+        "timestamp": 1765202412.5912054,
+        "syscall": "write",
+        "latency": 0.002946,
+        "predicted_next": "close",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:20",
+        "timestamp": 1765202420.9572473,
+        "syscall": "pselect6",
+        "latency": 0.441141,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:32",
+        "timestamp": 1765202432.9187117,
+        "syscall": "pselect6",
+        "latency": 0.330488,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:36",
+        "timestamp": 1765202436.0122736,
+        "syscall": "pselect6",
+        "latency": 0.435131,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:39",
+        "timestamp": 1765202439.0329597,
+        "syscall": "pselect6",
+        "latency": 0.365006,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:39",
+        "timestamp": 1765202439.1967983,
+        "syscall": "pselect6",
+        "latency": 0.19054,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:39",
+        "timestamp": 1765202439.3519824,
+        "syscall": "pselect6",
+        "latency": 0.296779,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:39",
+        "timestamp": 1765202439.5210352,
+        "syscall": "pselect6",
+        "latency": 0.142695,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:39",
+        "timestamp": 1765202439.6789615,
+        "syscall": "pselect6",
+        "latency": 0.347761,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:41",
+        "timestamp": 1765202441.6566503,
+        "syscall": "ioctl",
+        "latency": 0.006717,
+        "predicted_next": "lseek",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:42",
+        "timestamp": 1765202442.6971776,
+        "syscall": "pselect6",
+        "latency": 0.374596,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:42",
+        "timestamp": 1765202442.8510177,
+        "syscall": "pselect6",
+        "latency": 0.491113,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:43",
+        "timestamp": 1765202443.0116029,
+        "syscall": "pselect6",
+        "latency": 0.260968,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:43",
+        "timestamp": 1765202443.1532466,
+        "syscall": "pselect6",
+        "latency": 0.239544,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:43",
+        "timestamp": 1765202443.3101442,
+        "syscall": "pselect6",
+        "latency": 0.291771,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:46",
+        "timestamp": 1765202446.157047,
+        "syscall": "pselect6",
+        "latency": 0.417816,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:50",
+        "timestamp": 1765202450.0783088,
+        "syscall": "pselect6",
+        "latency": 0.293842,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:51",
+        "timestamp": 1765202451.5443103,
+        "syscall": "close",
+        "latency": 0.00174,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:53",
+        "timestamp": 1765202453.6508906,
+        "syscall": "pselect6",
+        "latency": 0.462506,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:53",
+        "timestamp": 1765202453.8129294,
+        "syscall": "pselect6",
+        "latency": 0.23443,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:30:57",
+        "timestamp": 1765202457.192583,
+        "syscall": "pselect6",
+        "latency": 0.363917,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:31:01",
+        "timestamp": 1765202461.035037,
+        "syscall": "pselect6",
+        "latency": 0.187455,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:31:01",
+        "timestamp": 1765202461.2439923,
+        "syscall": "pselect6",
+        "latency": 0.213071,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:31:01",
+        "timestamp": 1765202461.4184477,
+        "syscall": "pselect6",
+        "latency": 0.253747,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:31:01",
+        "timestamp": 1765202461.5992224,
+        "syscall": "pselect6",
+        "latency": 0.478194,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:31:07",
+        "timestamp": 1765202467.1014564,
+        "syscall": "pselect6",
+        "latency": 0.275176,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:31:07",
+        "timestamp": 1765202467.2799892,
+        "syscall": "pselect6",
+        "latency": 0.456123,
+        "predicted_next": "openat",
+        "reason": "Abnormal Latency/Sequence"
+    },
+    {
+        "time_readable": "2025-12-08 19:31:07",
+        "timestamp": 1765202467.4608443,
+        "syscall": "pselect6",
+        "latency": 0.305627,
+        "predicted_next": "pselect6",
+        "reason": "Abnormal Latency/Sequence"
     }
 ]
