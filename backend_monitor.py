@@ -22,6 +22,7 @@ from tensorflow.keras.models import load_model
 MODEL_DIR = "models"
 SEQUENCE_LENGTH = 5 
 LOG_FILE = "anomaly_log.json"
+FLAG_FILE = "ai_enabled.flag" # File to check if AI Mode is ON
 # Regex matches: openat(AT_FDCWD, "file", ...) = 3 <0.00015>
 STRACE_REGEX = re.compile(r'^(\w+)\((.*)\)\s+=\s+([-0-9a-fx\?]+).*\s+<([0-9\.]+)>')
 
@@ -31,7 +32,7 @@ class IntelligentMonitor:
         self.logger.info("Initializing AI Engine...")
         
         # State tracking for optimization
-        self.has_optimized = False 
+        self.last_opt_time = 0 
         
         self._send_json_status("Loading AI Models (this may take a few seconds)...")
 
@@ -99,35 +100,33 @@ class IntelligentMonitor:
         except Exception as e:
             self.logger.error(f"Failed to write log: {e}")
 
-    # --- NEW: Optimization Logic ---
+    # --- NEW: Optimization Logic with Flag Check ---
     def _optimize_process(self, pid):
         """
-        Active Optimization: Boosts process priority (Nice value) 
-        when latency anomalies are detected.
+        Active Optimization: Boosts process priority if AI Mode is enabled.
         """
-        # Only optimize once to avoid spamming the OS
-        if self.has_optimized:
+        # 1. Check if AI Mode is enabled (by checking for flag file)
+        if not os.path.exists(FLAG_FILE):
+            # AI is OFF (Passive Mode) - Do nothing but log internally if needed
             return
 
-        self._send_json_status(f"⚠️ Anomaly Detected! Initiating AI Optimization for PID {pid}...", is_error=False)
+        # 2. Cooldown Check
+        if time.time() - self.last_opt_time < 10:
+            return
+
+        self._send_json_status(f"⚡ Anomaly Detected! AI Engaging Optimization for PID {pid}...", is_error=False)
         
         try:
-            # Command: renice -n -5 -p <PID>
-            # -n -5: Sets priority higher (Standard linux nice range is -20 to 19)
+            # Optimize by renicing process to higher priority (-5)
             cmd = ["renice", "-n", "-5", "-p", str(pid)]
-            
             result = subprocess.run(cmd, capture_output=True, text=True)
             
             if result.returncode == 0:
-                success_msg = f"🚀 OPTIMIZATION SUCCESS: Priority boosted to -5 for PID {pid}."
-                self._send_json_status(success_msg)
-                self.has_optimized = True # Mark as optimized so we don't do it again
+                self._send_json_status(f"🚀 OPTIMIZATION SUCCESS: Priority boosted to -5.")
+                self.last_opt_time = time.time()
             else:
-                # If we lack permissions, log it but don't crash
-                err = result.stderr.strip()
-                self._send_json_status(f"❌ Optimization Failed (Need Sudo?): {err}", is_error=True)
-                # We set this to true anyway to stop retrying every millisecond
-                self.has_optimized = True 
+                self._send_json_status(f"❌ Optimization Failed: {result.stderr.strip()}", is_error=True)
+                self.last_opt_time = time.time()
                 
         except Exception as e:
             self._send_json_status(f"Optimization Error: {e}", is_error=True)
@@ -223,13 +222,12 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python3 backend_monitor.py <PID>")
         sys.exit(1)
-        
-    pid = sys.argv[1]
     
     # Optional: Fix file ownership if running as sudo
     if os.environ.get('SUDO_UID'):
         if os.path.exists(LOG_FILE):
              os.chown(LOG_FILE, int(os.environ['SUDO_UID']), int(os.environ['SUDO_GID']))
 
+    pid = sys.argv[1]
     monitor = IntelligentMonitor()
     monitor.start_monitoring(pid)
