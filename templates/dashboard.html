@@ -7,189 +7,106 @@
     
     <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg: #030712;
-            --panel: rgba(17, 24, 39, 0.75);
-            --border: rgba(56, 189, 248, 0.2);
-            --accent: #00f3ff;
-            --accent-glow: rgba(0, 243, 255, 0.2);
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --green: #0aff60;
-            --green-glow: rgba(10, 255, 96, 0.3);
-            --red: #ff0055;
-            --red-glow: rgba(255, 0, 85, 0.4);
-            --yellow: #facc15;
+            --bg: #030712; --panel: rgba(17, 24, 39, 0.75); --border: rgba(56, 189, 248, 0.2);
+            --accent: #00f3ff; --accent-glow: rgba(0, 243, 255, 0.2);
+            --text-main: #f8fafc; --text-dim: #94a3b8;
+            --green: #0aff60; --red: #ff0055; --yellow: #facc15;
         }
 
         body {
-            background-color: var(--bg);
-            background-image: 
-                radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 70%),
-                linear-gradient(0deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
-            background-size: 100% 100%, 40px 40px, 40px 40px;
-            color: var(--text-main);
-            font-family: 'JetBrains Mono', monospace;
-            margin: 0;
-            padding: 20px;
-            height: 100vh;
-            box-sizing: border-box;
-            overflow: hidden; 
-            display: flex;
-            flex-direction: column;
+            background: var(--bg) radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 70%);
+            color: var(--text-main); font-family: 'JetBrains Mono', monospace;
+            margin: 0; padding: 20px; height: 100vh; overflow: hidden; display: flex; flex-direction: column;
         }
 
         /* --- Header --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 60px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-            flex-shrink: 0;
-            padding: 0 10px;
+        header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            height: 60px; margin-bottom: 20px; border-bottom: 1px solid var(--border); flex-shrink: 0; 
         }
+        h1 { font-family: 'Orbitron'; color: var(--accent); letter-spacing: 2px; margin: 0; font-size: 24px; text-shadow: 0 0 10px var(--accent-glow); }
+        .badge { font-size: 10px; background: var(--border); padding: 2px 6px; border-radius: 4px; color: var(--text-dim); margin-left: 10px; vertical-align: middle; }
 
-        h1 { 
-            margin: 0; font-family: 'Orbitron', sans-serif; font-size: 24px; 
-            color: var(--accent); text-shadow: 0 0 10px var(--accent-glow); letter-spacing: 2px;
-        }
+        /* --- Controls --- */
+        .controls { display: flex; gap: 15px; align-items: center; }
         
-        .badge {
-            font-size: 10px; background: var(--border); padding: 2px 6px;
-            border-radius: 4px; color: var(--text-dim); margin-left: 10px; vertical-align: middle;
+        .ai-toggle-container {
+            display: flex; align-items: center; gap: 10px; background: rgba(0, 243, 255, 0.05);
+            padding: 5px 15px; border: 1px solid var(--border); clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
         }
+        .ai-label { font-family: 'Orbitron'; font-size: 12px; color: var(--accent); }
+        
+        /* Switch CSS */
+        .switch { position: relative; display: inline-block; width: 40px; height: 20px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #334155; transition: .4s; }
+        .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 4px; bottom: 4px; background-color: white; transition: .4s; }
+        input:checked + .slider { background-color: var(--accent); box-shadow: 0 0 10px var(--accent-glow); }
+        input:checked + .slider:before { transform: translateX(20px); background-color: #000; }
+        .slider.round { border-radius: 20px; } .slider.round:before { border-radius: 50%; }
+        
+        .separator { width: 1px; height: 30px; background: var(--border); margin: 0 5px; }
 
-        .controls { display: flex; gap: 15px; }
-        
         select, button {
-            background-color: rgba(15, 23, 42, 0.8); color: var(--accent);
-            border: 1px solid var(--border); padding: 8px 16px;
-            font-family: 'Orbitron', sans-serif; font-size: 12px;
-            cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 1px;
+            background-color: rgba(15, 23, 42, 0.8); color: var(--accent); border: 1px solid var(--border);
+            padding: 8px 16px; font-family: 'Orbitron'; font-size: 12px; cursor: pointer; transition: all 0.2s;
             clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
         }
-
         button:hover { background-color: var(--accent); color: #000; box-shadow: 0 0 15px var(--accent-glow); }
-        
         button.stop { color: var(--red); border-color: var(--red); }
-        button.stop:hover { background-color: var(--red); color: #fff; box-shadow: 0 0 15px var(--red-glow); }
-
+        button.stop:hover { background-color: var(--red); color: #fff; box-shadow: 0 0 15px rgba(255, 0, 85, 0.4); }
         button.reset { color: var(--yellow); border-color: var(--yellow); }
-        button.reset:hover { background-color: var(--yellow); color: #000; box-shadow: 0 0 15px var(--yellow); }
+        button.reset:hover { background-color: var(--yellow); color: #000; box-shadow: 0 0 15px rgba(250, 204, 21, 0.4); }
 
         /* --- KPI Cards --- */
-        .kpi-container {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-            height: 100px; flex-shrink: 0; margin-bottom: 20px;
-        }
-
-        .card {
-            background: var(--panel); backdrop-filter: blur(10px);
-            border: 1px solid var(--border); padding: 15px 25px;
-            display: flex; flex-direction: column; justify-content: center;
-            position: relative; overflow: hidden;
-        }
-        
-        .card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--border);
-        }
-
-        .card-title { font-family: 'Orbitron', sans-serif; font-size: 10px; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 5px; }
+        .kpi-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; height: 100px; flex-shrink: 0; margin-bottom: 20px; }
+        .card { background: var(--panel); border: 1px solid var(--border); padding: 15px; display: flex; flex-direction: column; justify-content: center; position: relative; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--border); }
+        .card-title { font-family: 'Orbitron'; font-size: 10px; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 5px; }
         .card-value { font-size: 24px; font-weight: 700; color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.1); }
-        .card-sub { font-size: 10px; color: var(--text-dim); margin-top: 5px; }
+        .status-anomaly { color: var(--red); text-shadow: 0 0 15px rgba(255, 0, 85, 0.4); animation: shake 0.5s; }
+        .status-healthy { color: var(--green); text-shadow: 0 0 10px rgba(10, 255, 96, 0.3); }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } }
 
-        /* --- Main Dashboard Grid --- */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 20px;
-            flex-grow: 1;
-            min-height: 0; 
-            height: 100%;
-        }
-
-        .main-chart-panel {
-            grid-column: 1 / 2; grid-row: 1 / 3;
-            background: var(--panel); border: 1px solid var(--border);
-            backdrop-filter: blur(10px); padding: 20px;
-            display: flex; flex-direction: column;
-            min-height: 0; min-width: 0;
-        }
-
-        .side-panel-top {
-            grid-column: 2 / 3; grid-row: 1 / 2;
-            background: var(--panel); border: 1px solid var(--border); padding: 15px;
-            display: flex; flex-direction: column;
-            min-height: 0; min-width: 0;
-        }
-
-        .side-panel-bottom {
-            grid-column: 2 / 3; grid-row: 2 / 3;
-            background: rgba(0, 0, 0, 0.6); border: 1px solid var(--border);
-            display: flex; flex-direction: column;
-            min-height: 0; min-width: 0;
-        }
-
-        .panel-header {
-            font-family: 'Orbitron', sans-serif; font-size: 12px; color: var(--accent);
-            margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;
-            flex-shrink: 0;
-        }
+        /* --- Grid & Charts --- */
+        .dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; flex-grow: 1; height: 100%; min-height: 0; }
+        .main-chart-panel { grid-column: 1 / 2; grid-row: 1 / 3; background: var(--panel); border: 1px solid var(--border); padding: 15px; display: flex; flex-direction: column; min-height: 0; }
+        .side-panel-top { grid-column: 2 / 3; grid-row: 1 / 2; background: var(--panel); border: 1px solid var(--border); padding: 15px; display: flex; flex-direction: column; min-height: 0; }
+        .side-panel-bottom { grid-column: 2 / 3; grid-row: 2 / 3; background: rgba(0,0,0,0.6); border: 1px solid var(--border); display: flex; flex-direction: column; min-height: 0; }
         
-        .live-indicator {
-            width: 8px; height: 8px; background-color: var(--red); border-radius: 50%;
-            box-shadow: 0 0 8px var(--red); animation: blink 1s infinite;
-        }
-
-        .chart-container {
-            flex-grow: 1; position: relative; width: 100%; height: 100%; overflow: hidden;
-        }
-        
+        .panel-header { font-family: 'Orbitron'; font-size: 12px; color: var(--accent); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+        .live-indicator { width: 8px; height: 8px; background-color: var(--red); border-radius: 50%; box-shadow: 0 0 8px var(--red); animation: blink 1s infinite; }
+        .chart-container { flex-grow: 1; position: relative; width: 100%; height: 100%; overflow: hidden; }
         canvas { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
 
-        /* Terminal */
-        .terminal-window {
-            flex-grow: 1; overflow-y: auto; padding: 10px; font-size: 10px;
-            line-height: 1.4; color: var(--text-dim);
-        }
-        .terminal-window::-webkit-scrollbar { width: 4px; }
-        .terminal-window::-webkit-scrollbar-thumb { background: var(--border); }
-        .log-entry { margin-bottom: 2px; border-bottom: 1px solid rgba(255,255,255,0.02); }
+        /* --- Terminal --- */
+        .terminal-window { flex-grow: 1; overflow-y: auto; padding: 10px; font-size: 10px; line-height: 1.4; color: var(--text-dim); }
+        .log-entry { border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 2px; }
         .log-time { color: var(--accent); margin-right: 8px; }
         .log-warn { color: var(--red); }
-
-        @keyframes blink { 50% { opacity: 0.2; } }
-        .status-healthy { color: var(--green); text-shadow: 0 0 10px var(--green-glow); }
-        .status-anomaly { color: var(--red); text-shadow: 0 0 15px var(--red-glow); animation: shake 0.5s; }
-        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } }
-        .val-predict { color: var(--accent); }
     </style>
 </head>
 <body>
-
     <header>
-        <div>
-            <h1>AI SYSCALL OPTIMIZER <span class="badge">SYS.MONITOR.v2</span></h1>
-        </div>
+        <div><h1>AI SYSCALL OPTIMIZER <span class="badge">SYS.MONITOR.v2</span></h1></div>
         <div class="controls">
+            <div class="ai-toggle-container">
+                <span class="ai-label">AI AUTO-PILOT</span>
+                <label class="switch">
+                    <input type="checkbox" id="aiToggle" onclick="toggleAI()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="separator"></div>
+            
             <button onclick="scanProcesses()">/// Scan Net</button>
-            <select id="processSelect">
-                <option value="" disabled selected>SELECT TARGET...</option>
-            </select>
+            <select id="processSelect"><option value="" disabled selected>SELECT TARGET...</option></select>
             <button class="start" onclick="startMonitor()" id="btnStart">[ EXECUTE ]</button>
-            
             <button class="reset" onclick="resetPriority()" id="btnReset" style="display:none;">[ RESET PRIORITY ]</button>
-            
             <button class="stop" onclick="stopMonitor()" id="btnStop" style="display:none;">[ TERMINATE ]</button>
         </div>
     </header>
@@ -198,45 +115,32 @@
         <div class="card" style="border-left: 4px solid var(--yellow);">
             <div class="card-title">ACTIVE SYSCALL</div>
             <div class="card-value" id="valSyscall" style="color: var(--yellow)">IDLE</div>
-            <div class="card-sub" id="subLatency">LATENCY: 0.0000s</div>
+            <div style="font-size:10px; color:#94a3b8" id="subLatency">LATENCY: 0.0000s</div>
         </div>
         <div class="card" style="border-left: 4px solid var(--accent);">
             <div class="card-title">NEURAL PREDICTION</div>
-            <div class="card-value val-predict" id="valPredict">CALCULATING...</div>
-            <div class="card-sub">CONFIDENCE INTERVAL: HIGH</div>
+            <div class="card-value" id="valPredict" style="color: var(--accent)">CALCULATING...</div>
+            <div style="font-size:10px; color:#94a3b8">CONFIDENCE INTERVAL: HIGH</div>
         </div>
         <div class="card" id="cardStatus" style="border-left: 4px solid var(--green);">
-            <div class="card-title">SYSTEM INTEGRITY</div>
+            <div class="card-title" id="statusTitle">SYSTEM INTEGRITY</div>
             <div class="card-value status-healthy" id="valStatus">OPTIMAL</div>
-            <div class="card-sub" id="subAnomalies">ANOMALIES DETECTED: 0</div>
+            <div style="font-size:10px; color:#94a3b8" id="subAnomalies">ANOMALIES DETECTED: 0</div>
         </div>
     </div>
 
     <div class="dashboard-grid">
         <div class="main-chart-panel">
-            <div class="panel-header">
-                <span>REAL-TIME KERNEL LATENCY</span>
-                <div class="live-indicator"></div>
-            </div>
-            <div class="chart-container">
-                <canvas id="latencyChart"></canvas>
-            </div>
+            <div class="panel-header"><span>REAL-TIME KERNEL LATENCY</span><div class="live-indicator"></div></div>
+            <div class="chart-container"><canvas id="latencyChart"></canvas></div>
         </div>
-
         <div class="side-panel-top">
             <div class="panel-header">SYSCALL DISTRIBUTION</div>
-            <div class="chart-container">
-                <canvas id="distChart"></canvas>
-            </div>
+            <div class="chart-container"><canvas id="distChart"></canvas></div>
         </div>
-
         <div class="side-panel-bottom">
-            <div class="panel-header" style="padding: 10px; border-bottom: 1px solid var(--border); margin-bottom: 0;">
-                <span>>_ SYSTEM LOG</span>
-            </div>
-            <div class="terminal-window" id="terminal">
-                <div class="log-entry"><span class="log-time">[INIT]</span> System ready. Waiting for target connection...</div>
-            </div>
+            <div class="panel-header" style="padding: 10px; border-bottom: 1px solid var(--border); margin-bottom: 0;"><span>>_ SYSTEM LOG</span></div>
+            <div class="terminal-window" id="terminal"><div class="log-entry"><span class="log-time">[INIT]</span> System ready.</div></div>
         </div>
     </div>
 
@@ -245,142 +149,86 @@
         let anomalyCount = 0;
         let syscallCounts = {};
 
-        // --- Chart 1: Latency ---
+        // --- Chart Config ---
         const ctxLatency = document.getElementById('latencyChart').getContext('2d');
         const gradLatency = ctxLatency.createLinearGradient(0, 0, 0, 400);
-        gradLatency.addColorStop(0, 'rgba(0, 243, 255, 0.4)');
-        gradLatency.addColorStop(1, 'rgba(0, 243, 255, 0.0)');
+        gradLatency.addColorStop(0, 'rgba(0, 243, 255, 0.4)'); gradLatency.addColorStop(1, 'rgba(0, 243, 255, 0.0)');
 
         const latencyChart = new Chart(ctxLatency, {
             type: 'line',
-            data: {
-                labels: [],
-                datasets: [{
-                    label: 'Latency (s)',
-                    data: [],
-                    borderColor: '#00f3ff',
-                    borderWidth: 2,
-                    backgroundColor: gradLatency,
-                    fill: true,
-                    tension: 0.4,
-                    pointRadius: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false, 
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { display: false },
-                    y: { 
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' }, 
-                        ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono' } },
-                        border: { display: false }
-                    }
-                },
-                animation: false,
-                interaction: { mode: 'index', intersect: false }
-            }
+            data: { labels: [], datasets: [{ label: 'Latency (s)', data: [], borderColor: '#00f3ff', borderWidth: 2, backgroundColor: gradLatency, fill: true, tension: 0.4, pointRadius: 0 }] },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, ticks: { color: '#94a3b8' }, border: { display: false } } }, animation: false }
         });
 
-        // --- Chart 2: Distribution ---
-        const ctxDist = document.getElementById('distChart').getContext('2d');
-        const distChart = new Chart(ctxDist, {
+        const distChart = new Chart(document.getElementById('distChart').getContext('2d'), {
             type: 'bar',
-            data: {
-                labels: [],
-                datasets: [{
-                    label: 'Count',
-                    data: [],
-                    backgroundColor: '#0aff60',
-                    borderRadius: 2,
-                    barThickness: 8
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { display: false },
-                    y: { 
-                        grid: { display: false }, 
-                        ticks: { color: '#94a3b8', font: { family: 'Orbitron', size: 10 } } 
-                    }
-                }
-            }
+            data: { labels: [], datasets: [{ label: 'Count', data: [], backgroundColor: '#0aff60', borderRadius: 2 }] },
+            options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } } }
         });
 
         // --- Socket Logic ---
         socket.on('connect', () => { logToTerminal('Connected to Server Mainframe.'); scanProcesses(); });
-
         socket.on('scan_result', (data) => {
             const select = document.getElementById('processSelect');
             select.innerHTML = '<option value="" disabled selected>SELECT TARGET...</option>';
             data.processes.forEach(proc => {
-                const option = document.createElement('option');
-                option.value = proc.pid;
-                option.text = `PID: ${proc.pid} // ${proc.name}`;
-                select.appendChild(option);
+                const opt = document.createElement('option'); opt.value = proc.pid; opt.text = `PID: ${proc.pid} // ${proc.name}`;
+                select.appendChild(opt);
             });
         });
-
+        
         socket.on('new_data', (data) => {
-            if (data.type === 'status') {
-                logToTerminal(data.msg, data.error);
-                return;
-            }
-            if (data.type === 'data' || data.current_syscall) {
-                updateDashboard(data);
-            }
+            if (data.type === 'status') { logToTerminal(data.msg, data.error); return; }
+            if (data.type === 'data') updateDashboard(data);
         });
 
-        function scanProcesses() {
-            logToTerminal('Scanning for Python signatures...');
-            socket.emit('scan_processes');
+        // --- Interaction Functions ---
+        function scanProcesses() { logToTerminal('Scanning processes...'); socket.emit('scan_processes'); }
+        
+        function toggleAI() {
+            const isChecked = document.getElementById('aiToggle').checked;
+            const pid = document.getElementById('processSelect').value;
+            
+            // Visual feedback on the Integrity Card
+            const statusTitle = document.getElementById('statusTitle');
+            if (isChecked) {
+                statusTitle.innerHTML = "SYSTEM INTEGRITY <span style='color:var(--accent); text-shadow:0 0 8px var(--accent)'>(AI GUARD ACTIVE)</span>";
+            } else {
+                statusTitle.innerText = "SYSTEM INTEGRITY";
+            }
+            
+            socket.emit('toggle_ai', { enabled: isChecked });
         }
 
-        // --- NEW: Reset Function ---
         function resetPriority() {
             const pid = document.getElementById('processSelect').value;
-            if (pid) {
-                logToTerminal(`Sending Reset Command for PID ${pid}...`);
-                socket.emit('reset_priority', { pid: pid });
+            if (pid) { 
+                logToTerminal(`Sending Reset Command for PID ${pid}...`); 
+                socket.emit('reset_priority', { pid: pid }); 
             }
         }
 
         function startMonitor() {
-            const select = document.getElementById('processSelect');
-            const pid = select.value;
-            if (!pid) return alert("SELECT TARGET PROCESS FIRST");
-
+            const pid = document.getElementById('processSelect').value;
+            if (!pid) return alert("SELECT TARGET");
             socket.emit('start_monitor', { pid: pid });
-            document.getElementById('btnStart').style.display = 'none';
             
-            // Show Stop AND Reset buttons
+            document.getElementById('btnStart').style.display = 'none';
             document.getElementById('btnStop').style.display = 'inline-block';
             document.getElementById('btnReset').style.display = 'inline-block';
+            document.getElementById('processSelect').disabled = true;
             
-            select.disabled = true;
-            
-            latencyChart.data.labels = [];
-            latencyChart.data.datasets[0].data = [];
-            syscallCounts = {};
-            anomalyCount = 0;
+            latencyChart.data.labels = []; latencyChart.data.datasets[0].data = []; anomalyCount = 0;
             logToTerminal(`Initiating hook on PID ${pid}...`);
         }
 
         function stopMonitor() {
             socket.emit('stop_monitor');
             document.getElementById('btnStart').style.display = 'inline-block';
-            
-            // Hide Buttons
             document.getElementById('btnStop').style.display = 'none';
             document.getElementById('btnReset').style.display = 'none';
-            
             document.getElementById('processSelect').disabled = false;
-            logToTerminal('Monitor session terminated.');
+            logToTerminal('Monitor terminated.');
         }
 
         function updateDashboard(data) {
@@ -391,42 +239,30 @@
             const statusEl = document.getElementById('valStatus');
             const cardStatus = document.getElementById('cardStatus');
             statusEl.innerText = data.status;
-            
+
             if (data.status === "ANOMALY") {
                 if (statusEl.innerText !== "ANOMALY") logToTerminal(`⚠️ ANOMALY: ${data.current_syscall}`, true);
-                statusEl.className = "card-value status-anomaly";
-                cardStatus.style.borderLeftColor = "var(--red)";
-                anomalyCount++;
-                document.getElementById('subAnomalies').innerText = `ANOMALIES DETECTED: ${anomalyCount}`;
+                statusEl.className = "card-value status-anomaly"; cardStatus.style.borderLeftColor = "var(--red)";
+                anomalyCount++; document.getElementById('subAnomalies').innerText = `ANOMALIES DETECTED: ${anomalyCount}`;
             } else {
-                statusEl.className = "card-value status-healthy";
-                cardStatus.style.borderLeftColor = "var(--green)";
+                statusEl.className = "card-value status-healthy"; cardStatus.style.borderLeftColor = "var(--green)";
             }
 
-            if (latencyChart.data.labels.length > 60) {
-                latencyChart.data.labels.shift();
-                latencyChart.data.datasets[0].data.shift();
-            }
-            latencyChart.data.labels.push("");
-            latencyChart.data.datasets[0].data.push(data.latency);
+            if (latencyChart.data.labels.length > 60) { latencyChart.data.labels.shift(); latencyChart.data.datasets[0].data.shift(); }
+            latencyChart.data.labels.push(""); latencyChart.data.datasets[0].data.push(data.latency);
             latencyChart.update('none');
 
-            const sc = data.current_syscall;
-            syscallCounts[sc] = (syscallCounts[sc] || 0) + 1;
+            const sc = data.current_syscall; syscallCounts[sc] = (syscallCounts[sc] || 0) + 1;
             const sorted = Object.entries(syscallCounts).sort((a,b) => b[1] - a[1]).slice(0, 6);
-            distChart.data.labels = sorted.map(i => i[0].toUpperCase());
-            distChart.data.datasets[0].data = sorted.map(i => i[1]);
+            distChart.data.labels = sorted.map(i => i[0].toUpperCase()); distChart.data.datasets[0].data = sorted.map(i => i[1]);
             distChart.update('none');
         }
 
         function logToTerminal(msg, isWarning = false) {
             const term = document.getElementById('terminal');
-            const time = new Date().toLocaleTimeString('en-US', { hour12: false });
-            const div = document.createElement('div');
-            div.className = 'log-entry';
-            div.innerHTML = `<span class="log-time">[${time}]</span> <span class="${isWarning ? 'log-warn' : ''}">${msg}</span>`;
-            term.appendChild(div);
-            term.scrollTop = term.scrollHeight;
+            const div = document.createElement('div'); div.className = 'log-entry';
+            div.innerHTML = `<span class="log-time">[${new Date().toLocaleTimeString('en-US', {hour12:false})}]</span> <span class="${isWarning ? 'log-warn' : ''}">${msg}</span>`;
+            term.appendChild(div); term.scrollTop = term.scrollHeight;
         }
     </script>
 </body>
